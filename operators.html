@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Operators in JavaScript</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //Associativity and Precidency
+            //Associativity
+            var a = 30; //Associativity : right-to-left. As 30 in assigned in a.
+            var b = 20;
+            var c = 10;
+            var result1 = a + b + c; 
+            //Associativity : left-to-right. At first a is added with b. Then c is added with the result of (a+b).
+            var test_res1 = "Y"+b+c; 
+            /*Output = Y2010. Because of the associativity of left to right, b and c is converted to string 
+            data. As JavaScript is dynamically typed, so the type of test_res1 is also converted into sring.*/
+            var test_res2 = b+c+"Ayve"+a+b; 
+            /*Output = 30Ayve3020. b and c is considered as numbers. But after getting a string a and b 
+            is converted into string data.*/
+            document.write("<h1>The result 1 is : " + result1 + "</h1>");
+            document.write("<h1>The type of result 1 is : " + typeof(result1) + "</h1>");
+            document.write("<h1>The test result 1 is : " + test_res1 + "</h1>");
+            document.write("<h1>The type of test result 1 is : " + typeof(test_res1) + "</h1>");
+            document.write("<h1>The test result 2 is : " + test_res2 + "</h1>");
+            document.write("<h1>The type of test result 2 is : " + typeof(test_res2) + "</h1>");   
+
+            //Precedency
+            result3 = a+b*c;
+            document.write("<h1>The result 3 is : " + result3 + "</h1>"); 
+            /*Arithmatic operators follow Borma's rules which we follow in algebra also. i.e., multiplication
+            happens first before addition and so on.*/
+        </script>  
+    </body>
+</html>
