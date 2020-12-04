@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Control Statement in JavaScript</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //Find day of week by accepting its number. eg. 1-> Sunday, 2-> Monday etc.
+            var day = 5;
+            //switch-case accepts numbers, strings and boolean values.
+            switch(day)
+            {
+                case 1:
+                    document.write("<h2>Sunday</h2>");
+                    break;
+                case 2:
+                    document.write("<h2>Monday</h2>");
+                    break;
+                case 3:
+                    document.write("<h2>Tuesday</h2>");
+                    break;
+                case 4:
+                    document.write("<h2>Wednesday</h2>");
+                    break;
+                case 5:
+                    document.write("<h2>Thurseday</h2>");
+                    break;
+                case 6:
+                    document.write("<h2>Friday</h2>");
+                    break;
+                case 7:
+                    document.write("<h2>Saturday</h2>");
+                    break;
+                default:
+                    document.write("<h2>Wrong Value</h2>");
+
+            }
+
+            var day2 = "Sunday";
+            switch(day2)
+            {
+                case "Sunday":
+                    document.write("<h2>First working day.</h2>");
+                    break;
+                default:
+                    document.write("<h2>Other day.</h2>");
+            }
+
+            var day3 = true;
+            switch(day3)
+            {
+                case true:
+                    document.write("<h2>It is a working day.</h2>");
+                    break;
+                default:
+                    document.write("<h2>Other day.</h2>");
+            }
+
+            var num = 8;
+            switch(num%2)
+            {
+                case 0:
+                    document.write("<h2>Even.</h2>");
+                    break;
+                default:
+                    document.write("<h2>Not Even.</h2>");
+            }
+        </script>  
+    </body>
+</html>
