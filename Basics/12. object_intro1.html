@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Introduction to object in JavaScript</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var Car = {                    //Car is an object.
+                car_brand : "Tesla",             //Attributes
+                car_model : "Model 3",
+                car_price : 35000,
+
+                //When a function is inside a class or an object, it is termed as a method.
+                
+                teslaAutoPilot : function()
+                {
+                    document.write("<h3>This car has auto pilot.</h3>");
+                }
+            }
+            document.write("<h3>"+Car.car_brand+"</h3>");
+            Car.teslaAutoPilot();
+        </script>  
+    </body>
+</html>
+
