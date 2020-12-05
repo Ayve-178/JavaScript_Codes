@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Arrays in JavaScript</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //Arrays in javascript is indexed. And index starts from 0.
+            cars = ["Audi","BMW","Volvo"];
+            document.write("<h3>"+cars+"</h3>");
+
+            //Another way
+            fruits = new Array("Mango", "Apple", "Banana");
+            for(i=0;i<fruits.length;i++)
+            {
+                document.write("<h3>"+fruits[i]+"</h3>");
+            }
+
+            //Why JavaScript Arrays are different from Java or C++ Arrays??
+            //In JavaScript we can add extra values in the array at runtime. That means it is not a fix sized
+            //array. It can always increase or decrease in length. We can also add different data types.
+
+            fruits.push("Orange");
+            document.write("<h2>After adding an extra elements.</h2>");
+            for(i=0;i<fruits.length;i++)
+            {
+                document.write("<h3>"+fruits[i]+"</h3>");
+            }
+
+            //adding elements of different data types.
+            fruits.push(12);
+            document.write("<h2>After adding an extra number.</h2>");
+            for(i=0;i<fruits.length;i++)
+            {
+                document.write("<h3>"+fruits[i]+"</h3>");
+            }
+            
+            //There are also many interesting methods in javascript arrays.
+        </script>  
+    </body>
+</html>
