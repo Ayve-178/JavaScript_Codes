@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Introduction to object in JavaScript</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.write("<h3>Hello World!</h3>");
+        /*Objects in JS*/
+            var Car = {
+                car_brand : "Tesla",
+                car_model : "Model 3",
+                price : 35000,
+                waranty : 5,
+
+                teslaAutoPilot : function()
+                {
+                    document.write("<h3>This car has auto pilot.</h3>");
+                }
+            }
+            Car.teslaAutoPilot();
+            //100 lines of code.
+            //We want to add one more property in Car object.
+            Car.fuelType = "Electric";
+            document.write("<h3>"+Car.fuelType+"</h3>");
+            //We want to add one more method in Car object.
+            Car.newFn = function()
+            {
+                document.write("<h3>Added function!</h3>");
+            }
+            Car.newFn();
+            //If we want to delete any property.
+            delete Car.price;
+            document.write("<h3>"+Car.price+"</h3>");
+            //We can change the datatype of a property also.
+            Car.waranty = "5 years"
+            
+        </script>  
+    </body>
+</html>
+
