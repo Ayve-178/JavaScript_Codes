@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Taking Input from Radio Button</title>
+
+        <script type="text/javascript">
+            function btnClick()
+            {
+                var select = document.getElementById("selectbox");
+                alert(select.options[select.selectedIndex].value);
+            } 
+        </script> 
+    </head>
+    <body>
+        <select id="selectbox">
+            <option value="Mango">Mango</option>
+            <option value="Orange">Orange</option>
+            <option value="Banana">Banana</option>
+            <option value="Lemon">Lemon</option>
+            <option value="Apple">Apple</option>
+        </select>
+        <button id = "bt1" onclick="btnClick()">Click Here</button>
+    </body>
+</html>
+
