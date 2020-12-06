@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Introduction to object in JavaScript</title>
+
+        <script type="text/javascript">
+            //DOM manipulations and getElementById method
+            function buttonClick()
+            {
+                ///document.getElementById("heading2").innerHTML = "Hey There!";
+                ///alert("Button Clicked!");
+                //We can also store it in a variable.
+                var str = document.getElementById("heading2").innerHTML;
+                alert(str);
+            }
+            
+        </script> 
+    </head>
+    <body>
+        <button onclick="buttonClick()">Click Me</button>
+        <h2 id = "heading2">Some Random Text</h2>
+
+    </body>
+</html>
+
