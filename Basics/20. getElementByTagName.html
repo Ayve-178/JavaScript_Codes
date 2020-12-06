@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>DOM Manipulations : getElementByTagName</title>
+
+        <script type="text/javascript">
+            //We want to change the style of all those 5 paragraphs.
+            function changeStyling()
+            {
+                var para = document.getElementsByTagName("p");  //We have got an array "para" which has all p tag elements.
+                para[0].style.fontSize = 20;
+                para[1].style.color = "red";
+                para[2].style.fontWeight = "bold";
+                para[3].style.fontStyle = "italic";
+                //para.style.color = "blue"; This is wrong. As it is an array, we have to access it one by one!
+                //We can use a loop to change the style of all paragraphs at a time.
+                for(var i=0;i<para.length;i++)
+                {
+                    para[i].style.color = "blue";
+                }
+            } 
+        </script> 
+    </head>
+    <body>
+        <p>This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p>This is paragraph 3</p>
+        <p>This is paragraph 4</p>
+        <p>This is paragraph 5</p>
+        <button id = "bt1" onclick="changeStyling()">Click Here</button>
+    </body>
+</html>
+
