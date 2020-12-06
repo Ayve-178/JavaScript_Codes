@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Taking Input from Radio Button</title>
+
+        <script type="text/javascript">
+            function btnClick()
+            {
+                var radio1 = document.getElementById("rd1");
+                var radio2 = document.getElementById("rd2");
+                
+                if(radio1.checked==true)
+                    alert("The selected fruit is : "+radio1.value);
+                else if(radio2.checked==true)
+                    alert("The selected fruit is : "+radio2.value);
+                else
+                    alert("No fruit is selected!");
+            }
+            
+        </script> 
+    </head>
+    <body>
+        <input id = "rd1" name = "grp1" type="radio" value="Mango">Mango</input>
+        <br><br>
+        <input id = "rd2" name = "grp1" type="radio" value="Orange">Orange</input>
+        <!--If we give different names of radio buttons, then we can select all at a time. If we give same 
+            names of all radio buttons, then we can select only one at a time!-->
+        <br><br>
+        <button id = "btn1" onclick="btnClick()">Click Me</button>
+
+
+    </body>
+</html>
