@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>DOM Manipulations : getElementsByClassName</title>
+
+        <script type="text/javascript">
+            //We want to change the style of all those 5 paragraphs.
+            function changeStyling()
+            {
+                var element = document.getElementsByClassName("mypara");
+                for(var i=0;i<element.length;i++)
+                    element[i].style.color = "red";
+            } 
+        </script> 
+    </head>
+    <body>
+        <!--What if we want to change the style of paragraph 1, 3 and 5? We can't do it using getELementById. 
+        Because for every tag ID should be unique. For this we need getElementByClassName.-->
+        <p class = "mypara">This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p class = "mypara">This is paragraph 3</p>
+        <p>This is paragraph 4</p>
+        <p class = "mypara">This is paragraph 5</p>
+        <a class = "mypara" href="#">This is anchor tag.</a>
+        <br><br>
+        <button id = "bt1" onclick="changeStyling()">Click Here</button>
+    </body>
+</html>
+
