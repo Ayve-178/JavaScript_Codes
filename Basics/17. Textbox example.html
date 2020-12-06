@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Taking Input from Textbox</title>
+
+        <script type="text/javascript">
+        
+            //Take username and password from user and check!
+
+            var user_name = "Ayve_178", password = "123456";
+            function buttonClick()
+            {
+                var uname = document.getElementById("uname").value;
+                var pass = document.getElementById("pwd").value;
+                if(uname == user_name && password == pass)
+                    alert("Congratulaions!");
+                else
+                    alert("Username or password is wrong!");
+            }
+            
+        </script> 
+    </head>
+    <body>
+        <input id = "uname", placeholder="Username">
+        <br> <br>
+        <input type = "password" id = "pwd", placeholder="Password">
+        <br> <br>
+        <button id = "btn1" onclick="buttonClick()">Click Me</button>
+
+    </body>
+</html>
