@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>mouseover and mouseout events</title>
+
+        <script type="text/javascript">
+            //We want to change the style of all those 5 paragraphs.
+            function setNewImage()
+            {
+                document.getElementById("img1").src = "eee2.png"
+            } 
+            function setOldImage()
+            {
+                document.getElementById("img1").src = "eee1.jpg"
+            } 
+        </script> 
+    </head>
+    <body>
+        <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="eee1.jpg" width="400"/>
+    </body>
+</html>
+
