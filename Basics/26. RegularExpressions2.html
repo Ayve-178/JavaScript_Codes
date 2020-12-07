@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Regular Expressions in JS</title>
+
+        <script type="text/javascript">
+            /*Character Sets and Ranges in Regular Expressions.*/
+            
+            function validate()
+            {
+                var username = document.getElementById("uname").value;
+                //Regular Expressions are treated as objects in JS.
+                //We can create regex in two different ways. Here is the first one.
+                //var regx = /[s S]00/;      //Case sensitivity can be handled this way too.
+                //var regx = /[sdp]00/i;      //'i' makes the regex case insensitive.
+                //Here [sdp] means s00,d00 and p00 are valid expressions. here [sdp] is a character set.
+                //var regx = /[a-x]00/i; //a00 to x00 (a t0 x) all expressions are valid. [a-x] is a range of characters.
+                //regx = new RegExp("E00","i");  //The second one. Object oriented way.
+                //var regx = /[a-x A-X]00/; //Case sensitivity can be handled this way too.
+                //var regx = /[1-9]abc/i; //Number range.
+                //var regx = /[0-5]a[6-9][a-z]/i;
+                //If we want to exclude certain things in particular position.
+                //var regx = /[^1abc]abc/i; //The regex can't start with 1,a,b or c.
+                var regx = /[^1-9]abc/i;
+                if(regx.test(username))    //test() method returns boolean value.
+                {
+                    alert("Okay! Valid username.");
+                    document.getElementById("lbluser").style.visibility = "hidden";
+                }
+                else
+                {
+                    alert("Invalid username!!");
+                    document.getElementById("lbluser").style.visibility = "visible";
+                }
+            }
+
+            
+        </script> 
+    </head>
+    <body>
+        <form action="">
+            <input id = "uname" type="text" placeholder="Username"/>
+            <label id = "lbluser" style = "color:red; visibility:hidden;">Invalid Username</label>
+            <br><br>
+            
+            <button onclick = "validate()" type = "button">Submit</button>
+        </form>
+        <!--Whenver we need to submit some data to a server or other page for processing, then we will use the form tag.-->
+    </body>
+</html>
