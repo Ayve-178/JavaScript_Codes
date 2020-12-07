@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Regular Expressions in JS Part-4</title>
+
+        <script type="text/javascript">
+           
+            function Add()
+            {
+                var a = document.getElementById("t1").value;
+                var b = document.getElementById("t2").value;
+                //document.getElementById("op").innerHTML = "Result = "+(a+b);
+                console.log(a+b);
+            }
+        </script> 
+    </head>
+    <body>
+        <form action="">
+            <input id = "t1" type="text" placeholder="Text 1"/>
+            <br><br>
+            <input id = "t2" type="text" placeholder="Text 2"/>    
+            <br><br>
+            <button onclick = "Add()" type = "button">Add</button>
+            <br><br>
+            <h3 id = "op">Result = </h3>
+        </form>
+        <!--Whenver we need to submit some data to a server or other page for processing, then we will use the form tag.-->
+    </body>
+</html>
+
+<!--We can debug the code using chrome dev tools.-->
