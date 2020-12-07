@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Regular Expressions in JS Part-4</title>
+
+        <script type="text/javascript">
+            /*
+                \d - match any digit (equal to [0-9]) 
+                \w - match any word character (a-z, A-Z, 0-9 & _)
+                \s - match whitespace character (eg- spaces & tabs)
+                \t - match a tab only
+            */
+            //Email Validation in JS.
+            function validate()
+            {
+                var txt = document.getElementById("txt1").value;
+                var regx = /^([a-z 0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})$/;  //(a.b) means (axb) or (ayb), '.' can be any letter. To remove the speacial meaning we used the \.
+                //'+' means the pattern will be applied at least one time. And can be applied more than one time.
+                //we can use a range also (e.g-{2,10}) instead of '+'.
+                //'?' makes the part, right before it, optional.
+                if(regx.test(txt))
+                {
+                    document.getElementById("lbltxt").innerHTML = "Valid";
+                    document.getElementById("lbltxt").style.visibility = "visible";
+                    document.getElementById("lbltxt").style.color = "green";
+                }
+                else
+                {
+                    document.getElementById("lbltxt").innerHTML = "Invalid";
+                    document.getElementById("lbltxt").style.visibility = "visible";
+                    document.getElementById("lbltxt").style.color = "red";
+                }
+            }
+        </script> 
+    </head>
+    <body>
+        <form action="">
+            <input id = "txt1" type="text" placeholder="Email"/>
+            <label id = "lbltxt" style = "color:red; visibility:hidden;">Invalid</label>
+            <br><br>
+            
+            <button onclick = "validate()" type = "button">Submit</button>
+        </form>
+        <!--Whenver we need to submit some data to a server or other page for processing, then we will use the form tag.-->
+    </body>
+</html>
+
