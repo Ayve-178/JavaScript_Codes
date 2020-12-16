@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Basic Animation Part 2 - Scaling</title>
+
+        <script type="text/javascript">
+            var width = 100;
+            var difference = 2;
+            //document.getElementById("img1").style.width = width;
+            var intervalID = 0;
+
+            function increase()
+            {
+                clearInterval(intervalID);
+                intervalID = setInterval(expand,20);
+            }
+            function expand()
+            {
+                if(width<200)
+                {
+                    width = width + difference;
+                    document.getElementById("img1").style.width = width;
+                }
+                else
+                {
+                    clearInterval(intervalID);
+                }
+            }
+
+            function decrease()
+            {
+                clearInterval(intervalID);
+                intervalID = setInterval(shrink,20);
+            }
+            function shrink()
+            {
+                if(width>100)
+                {
+                    width = width - difference;
+                    document.getElementById("img1").style.width = width;
+                }
+                else
+                {
+                    clearInterval(intervalID);
+                }
+            }
+        </script> 
+    </head>
+    <body>
+        <br><br>
+        <img onmouseover="increase()" onmouseout="decrease()" src="heart.webp" id = "img1" width = "100px"/>
+    </body>
+</html>
+
