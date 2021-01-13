@@ -1,0 +1,40 @@
+<html>
+    <!--JQuery selectors allow you to select and manipulate HTML element(s).
+    JQuery selectors are used to 'find' (or select) HTML elements based on their name, id, 
+classes, types, attributes, values of attributes and much more. It's based on the existing CSS 
+Selectors, and in addition, it has some own custom selectors.-->
+    <head>
+        <title>JQuery Selectors</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2 class="myheading" id="heading1">Selectors up jQuery 1</h2>
+        <h2 class="myheading">Selectors up jQuery 2</h2>
+        <h2>Selectors up jQuery 3</h2>
+        <div class="myheading">
+            <p>This is a paragraph!</p>
+        </div>
+    
+        <button onclick="fn1()" id = "btn1">Click Me</button>
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"> 
+    </script> 
+    <!--<script src = "JS/jquery.js"></script>-->
+    <script>
+        function fn1()
+        {
+            //document.getElementById();
+            //$("h2").action();
+            //$("h2").fadeToggle();
+            //--All the elements with h2 tag will be faded.
+            //$("#heading1").fadeToggle();
+            //Only the first one, i.e., the element with id = "heading1" will be faded.
+            $(".myheading").fadeToggle();
+            //The elements with the class = "myheading" will be faded.
+        }
+    </script>
+</html>
+
