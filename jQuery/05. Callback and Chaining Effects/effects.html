@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Effects in jQuery - Callback and Chaining Effects</title>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Callback and Chaining Effects in jQuery</h2>
+        
+        <button id = "btntoggle">Toggle</button>
+        <button id = "btntoggle2">Toggle 2</button>
+
+        <div id="firstdiv" class="mydiv">
+            <p>This is first paragraph in first div!</p>
+            <p>This is second paragraph in first div!</p>
+        </div>
+        <div id="seconddiv" class="mydiv">
+            <p>This is third paragraph in second div!</p>
+        </div>
+        
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"> 
+    </script> 
+    <!--<script src = "JS/jquery.js"></script>-->
+
+    <!--callback - means call something only after the effect is done.-->
+    <!--In chaining we can perform multiple effects one after another.-->
+    <script>
+        $(document).ready(function(){
+            $("#btntoggle").click(function(){
+                $("#firstdiv").fadeToggle(2000,function(){
+                    alert("Fade toggling is done!")
+                    //This is the callback function
+                });
+            });
+            
+            $("#btntoggle2").click(function(){
+                $("#firstdiv").slideUp(1000).slideDown(1000).fadeOut(1000).fadeIn(1000);
+                //This is chaining effect
+            });
+
+        });
+
+    </script>
+</html>
