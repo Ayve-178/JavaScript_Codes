@@ -1,0 +1,72 @@
+<html>
+    <!--JQuery selectors allow you to select and manipulate HTML element(s).
+    JQuery selectors are used to 'find' (or select) HTML elements based on their name, id, 
+classes, types, attributes, values of attributes and much more. It's based on the existing CSS 
+Selectors, and in addition, it has some own custom selectors.-->
+    <head>
+        <title>Effects in jQuery</title>
+        <!--hide, show, toggle-->
+        <!--fadeOut, fadeIn, fadeToggle-->
+        <!--slideUp, slideDown, slideToggle-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Effects in jQuery</h2>
+        <p>This is a paragraph outside div.</p>
+
+        <button id = "btn1">Click Me 1</button>
+        <button id = "btn2">Click Me 2</button>
+        <button id = "btn3">Toggle</button>
+
+        <div id="firstdiv" class="mydiv">
+            <p>This is first paragraph in first div!</p>
+            <p>This is second paragraph in first div!</p>
+        </div>
+        <div id="seconddiv" class="mydiv">
+            <p>This is third paragraph in second div!</p>
+        </div>
+        <div id="thirddiv" class="mydiv">
+            <ul>
+                <li>This is List 1!</li>
+                <li>This is List 2!</li>
+                <li>This is List 3!</li>
+                <li>This is List 4!</li>
+                <li>This is List 5!</li>
+            </ul>
+        </div>    
+        
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"> 
+    </script> 
+    <!--<script src = "JS/jquery.js"></script>-->
+    <script>
+        $(document).ready(function(){
+            //The paragraph with the id firstdiv will hide after clicking the first button and will reveal 
+            //after clicking the second one.
+            $("#btn1").click(function(){
+                //$("#firstdiv").hide(2000);
+                //We can also give timing
+                //$("#firstdiv").fadeOut(2000);
+                $("#firstdiv").slideUp(2000);
+            });
+            $("#btn2").click(function(){
+                //$("#firstdiv").show("slow");
+                //$("#firstdiv").fadeIn("fast");
+                //We can use slow and fast instead of milliesecond.
+                $("#firstdiv").slideDown("fast");
+            });
+
+            $("#btn3").click(function(){
+                //$("#firstdiv").toggle();
+                //toggle() does hide and show both.
+                //$("#firstdiv").fadeToggle();
+                $("#firstdiv").slideToggle(3000);
+            });
+
+        });
+    </script>
+</html>
+
