@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>jQuery - DOM manipulations</title>
+        <!--
+            append() - Inserts content at the end of the selected elements.
+            prepend() - Inserts content at the beginning of the selected elements.
+            after() - Inserts content after the selected elements.
+            before() - Inserts content before the selected elements.
+        -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>jQuery - DOM manipulations - 2</h2>
+        
+        <button id = "btn1">Append</button>
+        <button id = "btn2">After</button>
+        <button id = "btn3">Prepend</button>
+        <button id = "btn4">Before</button>
+        <br><br>
+        <button id = "btn5">Remove</button>
+        <button id = "btn6">Empty</button>
+        
+
+        <div id="div" class="mydiv">
+            <p id="p1" value="hello world" class="p1class">This is the <b>second</b> paragraph in <i>first</i> div!</p>    
+            <p id="p2" class="p2class">Hello World!</p>
+        </div>
+        
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"> 
+    </script> 
+    <!--<script src = "JS/jquery.js"></script>-->
+   
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#div").append("<p>This is the <b>third</b> paragraph in <i>first</i> div!</p>");
+            });
+            //append() inserts the paragraph at the end of the division(inside).
+
+            $("#btn2").click(function(){
+                $("#div").after("<p>This is the <b>third</b> paragraph in <i>first</i> div!</p>");
+            });
+            //after() inserts the paragraph after (outside of) the division.
+
+            $("#btn3").click(function(){
+                $("#div").prepend("<p>This is the <b>first</b> paragraph in <i>first</i> div!</p>");
+            });
+            //prepend() inserts the paragraph at the beginning of the division(inside).
+
+            $("#btn4").click(function(){
+                $("#div").before("<p>This is the <b>first</b> paragraph in <i>first</i> div!</p>");
+            });
+            //before() inserts the paragraph before (outside of) the division.
+
+            $("#btn5").click(function(){
+                //$("#div").remove();
+                //remove() removes the entire division.
+                //$("p").remove("#p2");
+                //This will remove the paragraph with id=p2, i.e., the 2nd paragraph of the division.
+                //$("p").remove("#p2, #p1");
+                //If we want to remove multiple paragraphs.
+                $("p").remove(".p2class, .p1class");
+                //Here, we can pass classes instead of ids also.
+            });
+        
+
+            $("#btn6").click(function(){
+                $("#div").empty();
+            });
+            //empty() removes the contents inside the division.
+        });
+
+    </script>
+</html>
