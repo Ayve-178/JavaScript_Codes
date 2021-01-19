@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>jQuery - DOM manipulations</title>
+        <!--
+            addClass() - Adds one or more classes to the selected elements.
+            removeClass() - Removes one or more classes from the selected elements.
+            toggleClass() - Toggles between adding/removing classes from the selected elements.
+            css() - Sets or returns the style attributes.
+        -->
+        <link rel="stylesheet" href="style03.css">
+    </head>
+    <body>
+        <h2>jQuery - DOM manipulations - 3</h2>
+        
+        <button id = "btn1">Add Class</button>
+        <button id = "btn2">Remove Class</button>
+        <button id = "btn3">ToggleClass</button>
+        <button id = "btn4">CSS</button>
+        <br><br>
+        
+
+        <div id="div1" class="mydiv">
+            <p id="p1" value="hello world" class="p1class">This is the <b>second</b> paragraph in <i>first</i> div!</p>    
+        </div>
+
+        <div id="div2">
+            <p id="p2" class="p2class">This is the <b>third</b> paragraph in <i>first</i> div!</p>
+        </div>
+        
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"> 
+    </script> 
+    <!--<script src = "JS/jquery.js"></script>-->
+   
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#div1").addClass("newdivclass newparaclass");
+            });
+            $("#btn2").click(function(){
+                $("#div1").removeClass("newdivclass");
+            });
+            $("#btn3").click(function(){
+                $("#div1").toggleClass("newdivclass");
+            });
+            //We can pass sigle class as well as multiple classes.
+
+            $("#btn4").click(function(){
+                alert($("#div1").css("font-size"));
+                //Getting values
+                $("#div1").css("font-size", "20px");
+                //Setting values
+            });
+            
+        });
+
+    </script>
+</html>
