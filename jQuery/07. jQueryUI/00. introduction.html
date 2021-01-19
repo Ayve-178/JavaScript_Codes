@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Introduction to jQuery UI</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>Introduction to jQuery UI</h2>
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"> 
+    </script> 
+    <!--<script src = "JS/jquery.js"></script>-->
+    <script src="jqueryUI/jquery-ui.js" type="text/javascript"></script>
+   
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#div1").addClass("newdivclass newparaclass");
+            });
+            $("#btn2").click(function(){
+                $("#div1").removeClass("newdivclass");
+            });
+            $("#btn3").click(function(){
+                $("#div1").toggleClass("newdivclass");
+            });
+            //We can pass sigle class as well as multiple classes.
+
+            $("#btn4").click(function(){
+                alert($("#div1").css("font-size"));
+                //Getting values
+                $("#div1").css("font-size", "20px");
+                //Setting values
+            });
+            
+        });
+
+    </script>
+</html>
