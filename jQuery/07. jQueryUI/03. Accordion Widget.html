@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Accordion in jQuery UI</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>Accordion Example</h2>
+        <div id="panels">
+            <h3>CSE</h3>
+            <p>Computer Science and Engineering. It is one of the top and trending subject in our country.
+                Every year more than 2 million students are graduating in Computer Scinece and Engineering.
+            </p>
+
+            <h3>EEE</h3>
+            <p>Electrical and Electronics Engineering</p>
+
+            <h3>ME</h3>
+            <p>Mechanical Engineering</p> 
+        </div>
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"> 
+    </script> 
+    <!--<script src = "JS/jquery.js"></script>-->
+    <script src="jqueryUI/jquery-ui.js" type="text/javascript"></script>
+   
+    <script>
+        $(document).ready(function(){
+            //$("#panels").accordion();
+            //It will go inside the element with id = "panels" and convert the first child as a title and
+            //the next one as content. Again the 3rd one as title and the 4th one as content and goes on.
+
+            //Customization-->
+            $("#panels").accordion({
+                collapsible: true,
+                event: "click",
+                animate: 500,
+                active: 0,
+                heightStyle:true,
+                icons: {header: "ui-icon-plus", activeHeader: "ui-icon-minus"}
+
+                //More customizations and info : https://api.jqueryui.com/accordion/
+            });
+        });
+
+    </script>
+</html>
