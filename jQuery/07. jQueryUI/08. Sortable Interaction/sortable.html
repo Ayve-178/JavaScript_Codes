@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Sortable Interaction in jQuery UI</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    </head>
+
+    <body>
+        <h2>Sortable Interaction in jQuery UI</h2>
+        <div class="mydivs">
+            <div class="cube">
+                <h3>
+                    CUBE 1
+                </h3>
+            </div>
+            <div class="cube">
+                <h3>
+                    CUBE 2
+                </h3>
+            </div>
+            <div class="cube">
+                <h3>
+                    CUBE 3
+                </h3>
+            </div>
+            <img width="100" height="60" src="eee1.jpg">
+        </div>
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"> 
+    </script> 
+    <!--<script src = "JS/jquery.js"></script>-->
+    <script src="jqueryUI/jquery-ui.js" type="text/javascript"></script>
+   
+    <script>
+        $(document).ready(function(){
+            $(".mydivs").sortable({
+                opacity: 0.5,
+                cursor: "grabbing",
+                containment: "parent",
+                //axis: x,
+                distance: 5,
+                delay: 0
+            });
+        });
+    </script>
+</html>
