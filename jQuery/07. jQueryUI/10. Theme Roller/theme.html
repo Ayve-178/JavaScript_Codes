@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Resizable Interaction in jQuery UI</title>
+        
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href="jquery-ui-eggplant/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui-eggplant/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui-eggplant/jquery-ui.theme.css">
+    </head>
+
+    <body>
+        <h2>Theme in jQuery UI</h2>
+        <div id="dateinput" title="My Calendar"></div>
+        <div id="messagebox" title="Message Box">
+            <h3>This is just a Message Box</h3>
+        </div>
+        <div id="panels" style="width: 80%;">
+            <h3>CSE</h3>
+            <p>Computer Science and Engineering</p>
+            <h3>EEE</h3>
+            <p>Electrical and Electronics Engineering</p>
+            <h3>ME</h3>
+            <p>Mechanical Engineering</p>
+        </div>
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"> 
+    </script> 
+    <!--<script src = "JS/jquery.js"></script>-->
+    <script src="jquery-ui-eggplant/jquery-ui.js" type="text/javascript"></script>
+   
+    <script>
+        $(document).ready(function(){
+            $("#dateinput").datepicker({
+                numberOfMonths: 1,
+                changeYear: true,
+                changeMonth: true,
+                showWeek: true,
+                weekHeader: "Wk no.",
+                showOtherMonths: true
+            });
+
+            $("#messagebox").dialog({
+                title: "Custom Message Box",
+                draggable: true,
+                resizable: true,
+                height: 300,
+                width: 300,
+                modal: false
+            });
+
+            $("#panels").accordion({
+                collapsible: true,
+                event: "click",
+                animate: 300,
+                active: 0,
+                heightStyle: true,
+                icons: {header: "ui-icon-plus", activeHeader: "ui-icon-minus"}
+            });
+        });
+    </script>
+</html>
