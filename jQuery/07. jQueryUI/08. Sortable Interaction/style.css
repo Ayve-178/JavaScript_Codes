@@ -1,0 +1,8 @@
+.cube{
+    width: 80px;
+    height: 60px;
+    background-color: rgb(6, 252, 149);
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+}
